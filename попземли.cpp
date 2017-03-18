@@ -26,6 +26,7 @@ void runvasyrun ();
 void uhidotdereva ();
 void idudomoi ();
 void audio ();
+void subtitels (const char text []);
 
 //=============================================================================
 
@@ -59,6 +60,7 @@ int main()
     uhidotdereva ();
     idudomoi ();
     txPlaySound (NULL);
+    subtitels (" ÓÌÂˆ ‡ ÍÚÓ ÒÎÛ¯‡Î ÚÓÚ ÔÓÎÛ˜ÂÚ Î˛ÎÂˆ");
     return 0;
     }
 
@@ -199,6 +201,7 @@ void moveMedved()
          treies (200, 100, 1);
          topor (770, 65, t/2);
          tropinka (300, 550);
+         subtitels ("ﬂ «ÀŒ… Ã≈ƒ¬≈ƒ!!!! ¡”” ÿ¬¿…Õ»");
          x -= 5;
          y += 5;
          t ++;
@@ -222,6 +225,7 @@ void moveMan()
          dom (850, 250);
          treies (200, 100, 1);
          topor (770, 65, t/2);
+         subtitels ("¿¿¿¿¿¿¿ ¡Œﬁ—‹ ¿¿ —œ¿—»“≈");
         // x -= 5;
          y += 5;
          t ++;
@@ -245,6 +249,7 @@ void moveManright ()
          dom (850, 250);
          treies (200, 100, 1);
          topor (770, 65, t/2);
+         subtitels ("...¬”””””’...");
          x += 5;
          t ++;
          //y += 5;
@@ -268,6 +273,7 @@ void moveManup ()
          dom (850, 250);
          treies (200, 100, 1);
          topor (770, 65, t);
+         subtitels ("O MY GOD!");
         // x -= 5;
          y -= 5;
          t ++;
@@ -291,6 +297,7 @@ void moveManrright ()
          dom (850, 250);
          treies (200, 100, 1);
          topor (770, 65, t);
+         subtitels ("WHAT HAPPEN?");
          x += 5;
          //y -= 5;
          t ++;
@@ -314,6 +321,7 @@ void moveMantotaketopor ()
          dom (850, 250);
          treies (200, 100, 1);
          topor (770, 65, t);
+         subtitels ("WHERE IS MY AXE?");
          //x -= 5;
          y -= 5;
          t ++;
@@ -335,6 +343,7 @@ void moveMantotaketopor ()
          man (x, y, 0);
          dom (850, 250);
          treies (200, 100, 1);
+         subtitels ("OOO, YES THIS MY AXE");
          //topor (770, 65);
          //x -= 5;
          y -= 5;
@@ -356,6 +365,7 @@ void moveMangoback ()
          man (x, y, 0);
          dom (850, 250);
          treies (200, 100, 1);
+         subtitels ("HA HA HA");
          //topor (770, 65);
          //x -= 5;
          y += 5;
@@ -377,6 +387,7 @@ void moveManthgirr ()
          man (x, y, 0);
          dom (850, 250);
          treies (200, 100, 1);
+         subtitels ("OHOHOH");
          //topor (770, 65);
          x -= 5;
          //y += 5;
@@ -398,6 +409,7 @@ void moveManthgirr ()
          man (x, y, 0);
          dom (850, 250);
          treies (200, 100, 1);
+         subtitels ("TRRE) TREE)");
          //topor (770, 65);
          //x -= 5;
          y -= 5;
@@ -419,6 +431,7 @@ void moveManthgirr ()
          man (x, y, 0);
          dom (850, 250);
          treies (200, 100, 1);
+         subtitels ("WHERE IS MY TREE?");
          //topor (280, 200);
          x -= 5;
          //y -= 5;
@@ -442,6 +455,7 @@ void moveManthgirr ()
          topor (350, 115, 8);
          dom (850, 250);
          treies (200, 100, 1);
+         subtitels ("OH AAAA");
          x -= 5;
          t ++;
          //y -= 5;
@@ -463,6 +477,7 @@ void rubkadereva ()
          topor (350, 115 - t, t/3);
          dom (850, 250);
          treies (200, 100, t/4);
+         subtitels ("—“–¿ÿÕ€… √Àﬁ ");
          t ++;
          txSleep (0);
          }
@@ -483,6 +498,7 @@ void runvasyrun ()
          topor (350, 115 - 90, 30);
          dom (850, 250);
          treies (200, 100, 90/4);
+         subtitels ("—“–¿ÿÕ€… √Àﬁ ");
          t += 1;
          txSleep (0);
          }
@@ -502,6 +518,7 @@ void runvasyrun ()
          topor (350, 115 - 90, 30);
          dom (850, 250);
          treies (200, 100, 90/4);
+         subtitels ("—“–¿ÿÕ€… √Àﬁ ");
          t += 1;
          txSleep (0);
          }
@@ -520,6 +537,7 @@ void runvasyrun ()
          topor (350, 115 - 90, 30);
          dom (850, 250);
          treies (200, 100, 90/4 + t % 10);
+         subtitels ("");
          t += 1;
          txSleep (0);
          }
@@ -532,6 +550,12 @@ void audio ()
     txPlaySound ("vasya.wav");
     }
 
-
+//=============================================================================
+void subtitels (const char text [])
+    {
+    txSetColor (TX_BLACK);
+    txSelectFont ("Comic Sans MS", 40);
+    txTextOut (300, 500, text);
+    }
 
 
